@@ -25,12 +25,14 @@ const db = mysql.createConnection(
 
 
 // 'view all departments', 'view all roles', 'view all employees', 
-const optionsQuestion = {
+const optionsQuestion =
+[ {
     type: 'list',
     message: 'What would you like to do?',
     name: 'options',
-    choices: ['view all departments', 'view all roles', 'view all employees, add a department', 'add a role', 'add an employee', 'update an employee role'],
-    }
+    choices: ['view all departments', 'view all roles', 'view all employees, add a department', 'add a role', 'add an employee', 'update an employee role']
+    } 
+  ]
 
 const departmentQuestions = {
     type: 'input',
@@ -70,9 +72,11 @@ const employeeQuestions = [
     name: 'last_name',
 },
 {
-    type: 'input', 
+    type: 'list', 
     message: `What is the employee's role?`,
+    // *********************************************
     name: 'job_title',
+    options: [ ]
 },
 {
   type: 'list', 
@@ -95,6 +99,7 @@ inquirer
   .then((response) => {
     if(err){
       console.error(err);
+      console.log(response);
     }
     console.log(response.options);
     if(response.options === 'add a department') {
