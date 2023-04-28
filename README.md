@@ -14,9 +14,13 @@ Here are the steps to get this project running.
 
 ## Usage
 
-Once you have completed the Installation you can start ansering the prompts. The information will be presented as objects. as shown below. 
+Once you have completed the Installation you can start ansering the prompts. The information will be presented in json formatting, as shown below. 
 
 ![employees Screenshot](./assets/image/employees.png)
+
+Here is a walkthough of hte application being used. 
+
+[walkthrough video](https://drive.google.com/file/d/1uDiO7bqclQ-n8ypCVcUJKvewP7yIqonQ/view)
 
 ## Credits
 

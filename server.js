@@ -22,9 +22,9 @@ const db = mysql.createConnection(
   console.log(`Connected to the classlist_db database.`, process.env.DB_USER, process.env.DB_NAME, process.env.DB_PASSWORD));
 
 // Query database
-db.query('SELECT * FROM students', function (err, results) {
-  console.log(results);
-});
+// db.query('SELECT * FROM students', function (err, results) {
+//   console.log(results);
+// });
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
