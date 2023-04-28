@@ -19,8 +19,7 @@ const db = mysql.createConnection(
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
   },
-  console.log(`Connected to the classlist_db database.`)
-);
+  console.log(`Connected to the classlist_db database.`, process.env.DB_USER, process.env.DB_NAME, process.env.DB_PASSWORD));
 
 // Query database
 db.query('SELECT * FROM students', function (err, results) {
